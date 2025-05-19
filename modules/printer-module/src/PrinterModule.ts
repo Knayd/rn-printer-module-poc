@@ -5,6 +5,7 @@ import { PrinterModuleEvents } from "./PrinterModule.types";
 declare class PrinterModule extends NativeModule<PrinterModuleEvents> {
   onScan(): void;
   getDevices(): string;
+  onPrint(): void;
 }
 
 // This call loads the native module object from the JSI.

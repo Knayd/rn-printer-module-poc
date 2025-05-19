@@ -17,6 +17,7 @@ export default function HomeScreen() {
         <Text style={styles.text}>Printers:</Text>
         <Text style={styles.text}>{devices}</Text>
         <Button title="Scan" onPress={() => PrinterModule.onScan()} />
+        <Button title="Print" onPress={() => PrinterModule.onPrint()} />
       </View>
     </SafeAreaView>
   );
