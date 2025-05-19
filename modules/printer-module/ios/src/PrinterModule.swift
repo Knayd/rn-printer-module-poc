@@ -19,8 +19,8 @@ public class PrinterModule: Module, StarDeviceDiscoveryManagerDelegate {
             sendDeviceFoundEvent(valueToAppend: "Scan starting...")
             do {
                 try manager = StarDeviceDiscoveryManagerFactory.create(
-                    interfaceTypes: [InterfaceType.bluetooth])
-                manager?.discoveryTime = 1000
+                    interfaceTypes: [InterfaceType.bluetooth, InterfaceType.bluetoothLE])
+                manager?.discoveryTime = 15000
                 manager?.delegate = self
 
                 try manager?.startDiscovery()
