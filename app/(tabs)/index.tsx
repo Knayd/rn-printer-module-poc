@@ -13,15 +13,9 @@ export default function HomeScreen() {
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <View
-        style={{
-          flex: 1,
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <Text>Printers:</Text>
-        <Text>{devices}</Text>
+      <View style={styles.container}>
+        <Text style={styles.text}>Printers:</Text>
+        <Text style={styles.text}>{devices}</Text>
         <Button title="Scan" onPress={() => PrinterModule.onScan()} />
       </View>
     </SafeAreaView>
@@ -29,20 +23,12 @@ export default function HomeScreen() {
 }
 
 const styles = StyleSheet.create({
-  titleContainer: {
-    flexDirection: "row",
+  container: {
+    flex: 1,
     alignItems: "center",
-    gap: 8,
+    justifyContent: "center",
   },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
-  },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: "absolute",
+  text: {
+    color: "gray",
   },
 });
